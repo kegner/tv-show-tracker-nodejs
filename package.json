@@ -1,0 +1,40 @@
+{
+  "name": "tv-show-tracker-nodejs",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "npx tsx ./src/server.ts",
+    "client": "npm run dev --prefix client",
+    "server": "nodemon --exec npx tsx ./src/server.ts",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npx tsc",
+    "build-client": "cd client && npm install && npm run build"
+  },
+  "dependencies": {
+    "connect-history-api-fallback": "^2.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-flash": "^0.0.2",
+    "knex": "^3.1.0",
+    "morgan": "^1.10.0",
+    "objection": "^3.1.5",
+    "pg": "^8.14.1",
+    "pg-hstore": "^2.3.4",
+    "tv-show-tracker-nodejs": "file:"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "@types/connect-history-api-fallback": "^1.5.4",
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.1",
+    "@types/express-flash": "^0.0.5",
+    "@types/node": "^22.15.17",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.26.0",
+    "nodemon": "^3.1.9",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.0"
+  }
+}
